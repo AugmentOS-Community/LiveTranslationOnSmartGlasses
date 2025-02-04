@@ -10,7 +10,7 @@ import com.huaban.analysis.jieba.JiebaSegmenter;
 import com.huaban.analysis.jieba.SegToken;
 import com.augmentos.augmentoslib.AugmentOSLib;
 import com.augmentos.augmentoslib.AugmentOSSettingsManager;
-import com.augmentos.augmentoslib.DataStreamType;
+//import com.augmentos.augmentoslib.DataStreamType;
 import com.augmentos.augmentoslib.SmartGlassesAndroidService;
 import com.augmentos.augmentoslib.events.TranslateOutputEvent;
 
@@ -105,7 +105,7 @@ public class LiveTranslationService extends SmartGlassesAndroidService {
     public void onDestroy(){
         Log.d(TAG, "onDestroy: Called");
         Log.d(TAG, "Deinit augmentOSLib");
-        augmentOSLib.subscribe(DataStreamType.KILL_TRANSLATION_STREAM, this::processTranscriptionCallback);
+//        augmentOSLib.subscribe(DataStreamType.KILL_TRANSLATION_STREAM, this::processTranscriptionCallback);
 
         augmentOSLib.deinit();
         if (debugTranscriptsRunning) {
@@ -234,7 +234,8 @@ public class LiveTranslationService extends SmartGlassesAndroidService {
         callTimeoutHandler.postDelayed(timeoutRunnable, 16000);
 
         if (!newText.isEmpty()) {
-                if (getChosenSourceLanguage(this).equals("Chinese (Hanzi)") ||
+                if (getChosenSourceLanguage(this).equals("Japanese") ||
+                        getChosenSourceLanguage(this).equals("Chinese (Hanzi)") ||
                         getChosenSourceLanguage(this).equals("Chinese (Pinyin)") && !segmenterLoaded) {
                     translationText = hanziTextTranscriptProcessor.processString(finalTranslationText + " " + newText, isFinal);
                 } else {

@@ -37,6 +37,13 @@ android {
     }
 }
 
+android.applicationVariants.all { variant ->
+    variant.outputs.all { output ->
+        def appName = "LiveTranslation"
+        output.outputFileName = "${appName}.apk"
+    }
+}
+
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.navigation:navigation-fragment:2.8.4'
