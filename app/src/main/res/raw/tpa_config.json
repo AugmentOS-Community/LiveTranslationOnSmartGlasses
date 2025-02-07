@@ -42,6 +42,10 @@
           "value": "Dutch"
         },
         {
+          "label": "Finnish",
+          "value": "Finnish"
+        },
+        {
           "label": "French",
           "value": "French"
         },
@@ -100,6 +104,10 @@
         {
           "label": "Dutch",
           "value": "Dutch"
+        },
+        {
+          "label": "Finnish",
+          "value": "Finnish"
         },
         {
           "label": "French",
