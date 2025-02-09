@@ -1,7 +1,7 @@
 {
   "name": "Live Translation",
   "description": "Live translation on smart glasses",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "settings": [
     {
       "type": "group",

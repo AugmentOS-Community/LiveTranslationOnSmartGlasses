@@ -59,6 +59,11 @@ public class LiveTranslationService extends SmartGlassesAndroidService {
     }
 
     @Override
+    public void onCreate() {
+        super.onCreate();
+    }
+
+    @Override
     public void setup() {
         // Create AugmentOSLib instance with context: this
         augmentOSLib = new AugmentOSLib(this);
