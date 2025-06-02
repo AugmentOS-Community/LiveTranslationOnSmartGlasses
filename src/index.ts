@@ -329,7 +329,8 @@ class LiveTranslationApp extends TpaServer {
     console.log(`[Session ${sessionId}]: Confidence heuristic: ${confidenceHeuristicSetting}`);
 
     // Check if we should accept this interim transcript (length protection)
-    if (!confidenceCalculator.shouldAcceptInterim(translationData.text, translationData.isFinal)) {
+    // if (!confidenceCalculator.shouldAcceptInterim(translationData.text, translationData.isFinal)) {
+    if (false) {
       console.log(`[Session ${sessionId}]: Rejecting shorter interim transcript`);
       return; // Don't process shorter interim transcripts
     }
