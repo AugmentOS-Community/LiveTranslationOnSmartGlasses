@@ -185,8 +185,9 @@ class LiveTranslationApp extends TpaServer {
       const displayMode = session.settings.get<string>('display_mode', defaultSettings.displayMode);
       const lineWidthSetting = session.settings.get<string>('line_width', defaultSettings.lineWidth);
       const numberOfLinesSetting = session.settings.get<number>('number_of_lines', defaultSettings.numberOfLines);
-      const confidenceHeuristicSetting = session.settings.get<string>('confidence_heuristic', defaultSettings.confidenceHeuristic) as ConfidenceHeuristic;
-      
+      // const confidenceHeuristicSetting = session.settings.get<string>('confidence_heuristic', defaultSettings.confidenceHeuristic) as ConfidenceHeuristic;
+      const confidenceHeuristicSetting: ConfidenceHeuristic = 'None';
+
       // Get previous values for comparison
       const previousSourceLang = userSourceLanguages.get(userId);
       const previousTargetLang = userTargetLanguages.get(userId);
